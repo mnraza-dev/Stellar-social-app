@@ -1,4 +1,4 @@
-import {  Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import ScreenWrapper from "../components/ScreenWrapper";
 import { StatusBar } from "expo-status-bar";
@@ -7,14 +7,12 @@ import { theme } from "../constants/theme";
 
 import Button from "../components/Button";
 
-
 const Welcome = () => {
   return (
     <ScreenWrapper bg={"white"} style={{ flex: 1 }}>
       <StatusBar style="dark" />
 
       <View style={styles.container}>
-        {/* Welcome Image */}
         <Image
           resizeMode="contain"
           source={require("../assets/images/welcome.png")}
@@ -28,19 +26,13 @@ const Welcome = () => {
           </Text>
         </View>
 
-
-        <View  style={styles.footer}>
-
-        <Button
-          style={styles.welcomeButton}
-          title="Welcome"
-          onPress={() => alert("Welcome")}
-        >
-          Welcome
-        </Button>
-         
+        <View style={styles.footer}>
+          <Button
+            style={styles.welcomeButton}
+            title="Getting Started"
+            onPress={() => alert("Welcome")}
+          ></Button>
         </View>
-       
       </View>
     </ScreenWrapper>
   );
@@ -79,8 +71,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: theme.colors.text,
   },
-  footer:{
-    gap:20,
-
-  }
+  footer: {
+    gap: 20,
+  },
 });
