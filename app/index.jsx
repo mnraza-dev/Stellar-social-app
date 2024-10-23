@@ -1,14 +1,21 @@
-import { View, Text, Button } from "react-native";
 import React from "react";
 import { useRouter } from "expo-router";
 import ScreenWrapper from "../components/ScreenWrapper";
+
+import Button from "../components/Button";
 const index = () => {
   const router = useRouter();
   return (
     <ScreenWrapper bg="white" >
-      <Text>Mera Namsakara</Text>
-      <Button title="Welcome" onPress={() => router.push("welcome")}>
-        Go to Welcome
+
+      <Button title="Welcome" onPress={() => {
+        try {
+          router.push("welcome");
+        } catch (error) {
+          console.error("Navigation error:", error);
+        }
+      }}>
+        Welcome Screen 
       </Button>
     </ScreenWrapper>
   );

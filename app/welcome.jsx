@@ -31,7 +31,9 @@ const Welcome = () => {
             style={styles.welcomeButton}
             title="Getting Started"
             onPress={() => alert("Welcome")}
-          ></Button>
+          >
+            Getting Started
+          </Button>
         </View>
       </View>
     </ScreenWrapper>
@@ -55,21 +57,21 @@ const styles = StyleSheet.create({
   },
   welcomeButton: {
     padding: 20,
-    backgroundColor: theme.colors.primary,
+    backgroundColor: theme?.colors?.primary,
     borderRadius: 10,
   },
   title: {
     fontSize: hp(4),
     fontWeight: theme.fonts.extrabold,
     textAlign: "center",
-    color: theme.colors.text,
+    color: theme?.colors?.text,
   },
   punchLine: {
     fontSize: hp(1.9),
     paddingHorizontal: wp(10),
 
     textAlign: "center",
-    color: theme.colors.text,
+    color: theme?.colors?.text,
   },
   footer: {
     gap: 20,
