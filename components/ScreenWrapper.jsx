@@ -14,4 +14,4 @@ const ScreenWrapper = ({children ,bg}) => {
 
 export default ScreenWrapper
 
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({})
