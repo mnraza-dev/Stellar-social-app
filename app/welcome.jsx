@@ -31,19 +31,19 @@ const Welcome = () => {
           <Button
             buttonStyle={{ marginHorizontal: wp(3) }}
             title="Getting Started"
-            onPress={() => alert("Welcome")}
+            onPress={() => router.push('signup')}
           />
           <View style={styles.bottomTextContainer}>
             <Text style={styles.loginText}>
               Already have an account?
             </Text>
             <Pressable style={{
-             
-              
+
+
             }} onPress={() => {
-             router.push("signin")
+              router.push("signin")
             }}>
-              <Text style={[styles.loginText,  {fontWeight: theme.fonts.semibold,  color: theme.colors.primary,}]}>
+              <Text style={[styles.loginText, { fontWeight: theme.fonts.semibold, color: theme.colors.primary, }]}>
                 Login
               </Text>
             </Pressable>
