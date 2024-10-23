@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import ScreenWrapper from "../components/ScreenWrapper";
 import { StatusBar } from "expo-status-bar";
@@ -28,12 +28,20 @@ const Welcome = () => {
 
         <View style={styles.footer}>
           <Button
-            style={styles.welcomeButton}
+            buttonStyle={{ marginHorizontal: wp(3) }}
             title="Getting Started"
             onPress={() => alert("Welcome")}
-          >
-            Getting Started
-          </Button>
+          />
+          <View style={styles.bottomTextContainer}>
+            <Text style={styles.loginText}>
+              Already have an account?
+            </Text>
+            <Pressable>
+              <Text style={styles.loginText}>
+                Login
+              </Text>
+            </Pressable>
+          </View>
         </View>
       </View>
     </ScreenWrapper>
@@ -43,6 +51,14 @@ const Welcome = () => {
 export default Welcome;
 
 const styles = StyleSheet.create({
+  bottomTextContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  loginText: {
+
+  },
   container: {
     flex: 1,
     justifyContent: "space-around",
@@ -75,5 +91,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     gap: 20,
+    width: "100%",
+    justifyContent: "center",
   },
 });
