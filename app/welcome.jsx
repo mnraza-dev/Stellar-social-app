@@ -6,6 +6,7 @@ import { wp, hp } from "../helper/common";
 import { theme } from "../constants/theme";
 
 import Button from "../components/Button";
+import { router } from "expo-router";
 
 const Welcome = () => {
   return (
@@ -36,8 +37,13 @@ const Welcome = () => {
             <Text style={styles.loginText}>
               Already have an account?
             </Text>
-            <Pressable>
-              <Text style={styles.loginText}>
+            <Pressable style={{
+             
+              
+            }} onPress={() => {
+             router.push("signin")
+            }}>
+              <Text style={[styles.loginText,  {fontWeight: theme.fonts.semibold,  color: theme.colors.primary,}]}>
                 Login
               </Text>
             </Pressable>
@@ -54,10 +60,13 @@ const styles = StyleSheet.create({
   bottomTextContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    gap: 5
   },
   loginText: {
-
+    fontSize: hp(2),
+    textAlign: 'center',
+    color: theme.colors.text,
   },
   container: {
     flex: 1,
